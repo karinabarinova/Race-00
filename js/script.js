@@ -6,8 +6,17 @@ let calculate = (a, op, b) => {
     if (op === 'multiply') return firstNum * secondNum
     if (op === 'divide') return firstNum / secondNum
     if (op === 'percent') return firstNum * secondNum / 100;
-    if (op = 'sign') return firstNum * secondNum;
+    if (op === 'sign') return firstNum * secondNum;
+    if (op === 'root') return Math.sqrt(firstNum); 
+    if (op === 'factorial') return factorial(firstNum);
+    if (op === 'pow') return Math.pow(firstNum, secondNum);
+    if (op === 'second') return firstNum * firstNum;
+    if (op === 'round') return Math.round(firstNum);
 }
+
+function factorial(n) {
+    return (n != 1) ? n * factorial(n - 1) : 1;
+  }
 
 const calculator = document.querySelector('.calculator');
 const keys = calculator.querySelector('.calculator__keys');
@@ -23,7 +32,12 @@ const getKeyType = key => {
       action === 'multiply' ||
       action === 'divide' || 
       action === 'percent' ||
-      action === 'sign')
+      action === 'sign' ||
+      action === 'root' ||
+      action === 'factorial' ||
+      action === 'pow' ||
+      action === 'second' ||
+      action === 'round')
         return 'operator';
     return action;
 }
@@ -57,6 +71,8 @@ let createResult = (key, displayedNum, state) => {
     if (keyType === 'operator') {
         if (key.dataset.action === "sign")
             return calculate(displayedNum, "sign", "-1");
+        if (key.dataset.action === "root")
+            return calculate(displayedNum, "root", "0");
         return firstValue &&
         operator &&
         previousKeyType !== 'operator' &&

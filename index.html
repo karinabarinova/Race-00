@@ -8,37 +8,43 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-          <div class="calculator__display">0</div>
+<div class="container">
+    <div class="calculator">
+        <div class="calculator__display">0</div>
 
-          <div class="calculator__keys">
-            <button data-action="clear" style="background: #ef4406">C</button>
-            <button data-action="percent" style="background: black; color: white" >%</button>
-              <button class="key--operator" data-action="sign" style="background: black; color: white">+/-</button>
+        <div class="calculator__keys">
+            <button class="key--operator" data-action="root" style="background: #030303; color: white">√</button>
+            <button data-action="percent" style="background: black; color: white">%</button>
+            <button class="key--operator" data-action="sign" style="background: black; color: white">+/-</button>
+            <button class="key--operator" style="background: black; color: white" data-action="divide">/</button>
 
-            <button class="key--operator"style="background: black; color: white" data-action="divide">/</button>
+            <button class="key--operator" style="background: black; color: white" data-action="factorial">x!</button>
+            <button class="key--operator" style="background: black; color: white" data-action="pow">xy</button>
+            <button class="key--operator" style="background: black; color: white" data-action="second">x2</button>
+            <button class="key--operator " style="background: black; color: white; font-size: 10px" data-action="round">round</button>
+
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="key--operator" style="background: black; color: white"  data-action="multiply">&times;</button>
+            <button class="key--operator" style="background: black; color: white" data-action="multiply">&times;
+            </button>
             <br>
             <button>4</button>
             <button>5</button>
             <button>6</button>
             <button class="key--operator" style="background: black; color: white" data-action="subtract">-</button>
-             <br>
+            <br>
             <button>1</button>
             <button>2</button>
             <button>3</button>
-            <button class="key--operator" style="background: black; color: white"  data-action="add">+</button>
+            <button class="key--operator" style="background: black; color: white" data-action="add">+</button>
             <br>
             <button>0</button>
             <button data-action="decimal">.</button>
             <button class="key--equal" data-action="calculate">=</button>
-              <button data-action="clear" style="background: #d70808">AC</button>
-          </div>
+            <button data-action="clear" style="background: #d70808">AC</button>
         </div>
-      </div>
+    </div>
+</div>
 </body>
 </html>
