@@ -1,0 +1,50 @@
+body {
+    background: grey;
+}
+
+.pressed {
+    background-color: #CCCCCC;
+}
+.container {
+    width: 250px;
+    height: 400px;
+    padding: 4px;
+    margin: 80px auto;
+    border-radius: 10px;
+    background: #CCCCCC;
+    box-shadow: inset 5px 2px 4px #ffffff, -5px -5px 10px #ffffff;
+}
+.calculator {
+    width: 200px;
+    margin: 20px auto;
+}
+.calculator__display {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    text-align: right;
+    font-weight: 600;
+    padding: 15px;
+    margin: 30px 0 20px 0;
+    background-color: black;
+    color: white;
+    box-shadow: inset 6px 7px 10px #a5a5a5, 6px 7px 10px #ffffff
+}
+.calculator__keys button {
+
+    margin: 15px 0 0 5px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #CCCCCC;
+    box-shadow: 5px 5px 10px #b6acac, -5px -5px 10px #faf4f4;
+}
+button:active {
+    box-shadow:inset 1px 1px 2px #b6acac, inset -1px -1px 2px #faf4f4;
+}
